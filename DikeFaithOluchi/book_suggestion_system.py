@@ -53,7 +53,7 @@ def update_book(old_book, new_title):
         return "Book not found"
 
 
-def show_all_books(): 
+def show_all_books():
 
         return books
 
