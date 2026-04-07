@@ -1,24 +1,27 @@
 public class Book {
 
     private String title;
-    private String authorFirstName;
-    private String authorLastName;
-    private String nickName;
+    private String authorName;
     private String numberOfPages;
+    private int suggestedPage;
 
-    public Book(String title, String authorFirstName, String authorLastName, String numberOfPages) {
+    public Book(String title, String authorName, String numberOfPages) {
         this.title = title;
-        this.authorFirstName = authorFirstName;
-        this.authorLastName = authorLastName;
+        this.authorName = authorName;
         this.numberOfPages = numberOfPages;
-        this.nickName = nickName;
+    }
+    
+    public void setTitle(String title) {
+    this.title = title;
     }
 
+    public void setSuggestedPage(int pages) {
+    this.suggestedPage = pages;
+    }
+   
     public String getTitle()           { return title; }
-    public String getAuthorFirstName() { return authorFirstName; }
-    public String getAuthorLastName()  { return authorLastName; }
-    public String nickName()           { return nickName; }
+    public String getAuthorName()      { return authorName; }
     public String getNumberOfPages()   { return numberOfPages; }
-    
+    public int getSuggestedPage()      { return suggestedPage; }
     
 }

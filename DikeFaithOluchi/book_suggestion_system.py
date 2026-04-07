@@ -4,58 +4,87 @@ books = ["The Hobbit", "The Mystery", "The Boy", "Home Alone", "Act", "The Weddi
 
 def get_suggestion():
 
+    while True:
+
         book = random.choice(books)
 
         page = random.randint(1,300)
- 
-        return book, page
+
+        print(f"Book Title: {book}\nPage: {page}")
+
+        another_suggestion = input("\nWould you like to get another suggestion?(yes/no): ")
+
+        if another_suggestion == "yes":
+            continue
+
+        elif another_suggestion == "no":
+            break
+        
+        else:
+            print("\ninvalid input, try again\n")
+            break
+
 
 def add_book(new_book = None):
 
     if new_book is None:
     
-        return "No book provided"
+        new_book = input("\nEnter Title of the book to add: ")
 
     books.append(new_book)
 
-    return f"{new_book} added successfully"
+    print(f"{new_book} added successfully")
+
+
+
+
 
 
 def remove_book(book_to_remove = None):
 
     if book_to_remove is None:
 
-        return "No book provided"
+        book_to_remove = input("\nEnter Title of the book to remove: ")
 
     if book_to_remove in books:
     
         books.remove(book_to_remove)
 
-        return "Book removed successfully"
+        print("Book remove successfully")
 
     else:
 
-        return "Book not found"
+        print("Book not found")
 
 
-def update_book(old_book, new_title):
+
+def update_book():
+
+    old_book = input("Enter book to update: ")
 
     if old_book in books:
+
+        new_title = input("Enter new title: ")
 
         index = books.index(old_book)
 
         books[index] = new_title
 
-        return f"{old_book} as been updated to {new_title}"
+        print(f"{old_book} as been updated to {new_title}")
 
     else:
 
-        return "Book not found"
+        print("Book not found")
 
 
-def show_all_books(): 
 
-        return books
+def show_all_books():
+
+    print("\nAll books in the system\n")
+
+    for index, book in enumerate(books, start = 1):
+
+        print(f"{index}. {book}")
 
 
 
@@ -63,7 +92,9 @@ def exit_system():
 
     print("Thank you for using the book suggestion system")
 
-    return "Exiting.....Goodbye!"
+    print("Exiting.....Goodbye!")
+
+    exit()
 
 
 

@@ -42,7 +42,6 @@ public class BookSuggestionSystem {
         books.add("The Last Day At Forcados High School");
         books.add("Asa");
         books.add("Nigerian Women Will Stain Your White");
-        books.add("A Woman In Her Prime");
 
         while (true) { 
             System.out.print(GREEN + "\n" + indent + "=============================================" + "\n" + RESET);
