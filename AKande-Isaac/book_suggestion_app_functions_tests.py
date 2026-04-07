@@ -18,9 +18,9 @@ class book_suggestion_app_functions_tests(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_that_a_random_index_within_range_is_generated(self):
-
-        self.assertEqual(get_a_random_index_for_book_suggestion(),0)
-
+        books = ["the hobbit", "1984"]
+        self.assertTrue(get_a_random_index_for_book_suggestion(books) <101)
+        
     def test_check_pages_range(self):
         lengths = [1, 159]
 
