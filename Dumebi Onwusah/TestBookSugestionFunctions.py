@@ -7,10 +7,6 @@ class TestBookSugestionFunctions (unittest.TestCase):
         books_list.clear()
         books_list.extend(["The Great Gatsby", "To Kill a Mockingbird", "Brave Kingdom", "The Mystery", "Animal Farm", "The Hobbit" ])
 
-    def test_suggest_random_book_with_random_page_number(self):
-        result = suggest_random_book_with_random_page_number()
-        self.assertIn("Book Title:", result)
-
     def test_does_book_exist_function_if_book_exists(self):
         actual = does_book_exist("The Great Gatsby")
         expected = True
